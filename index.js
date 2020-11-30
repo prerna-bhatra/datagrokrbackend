@@ -5,6 +5,8 @@ const mongoose=require('mongoose');
 //import router
 const userRoutes=require('./routes/users')
 const userRoutes1=require('./routes/user1')
+const postRoutes1=require('./routes/post')
+const commentroutes=require('./routes/comment')
 const morgan=require("morgan");
 const bodyParser=require('body-parser');
 const cookieParser=require('cookie-parser')
@@ -30,7 +32,8 @@ app.use(cors())
 //routes midllewaye
 app.use('/api',userRoutes);
 app.use('/api',userRoutes1);
-
+app.use('/api',postRoutes1);
+app.use('/api',commentroutes);
 const port=process.env.PORT || 8000
 
 
