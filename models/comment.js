@@ -20,8 +20,7 @@ const commentSchema=new mongoose.Schema({
 	{
 		type:String,
 		require:true
-	},
-	_id: Object
+	}
 },
 {
 	timestamps:true

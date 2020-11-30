@@ -64,26 +64,20 @@ exports.deletecomment=(req,res)=>
 
 }
 
+exports.updatecomment=(req,res)=>
+{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	const  id = mongoose.Types.ObjectId(req.params.commentid); 
+	console.log(id)
+	console.log(typeof(id))
+	const updatedComment=req.body.commentpost;
+	 Comment.findByIdAndUpdate(id, { commentpost: updatedComment },
+                            function (err, docs) { 
+    if (err){ 
+        console.log(err) 
+    } 
+    else{ 
+        console.log("Order Deliverd : ", docs); 
+    } 
+}); 
+}
