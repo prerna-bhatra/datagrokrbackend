@@ -71,7 +71,7 @@ exports.updatereply=(req,res)=>
 	console.log(id)
 	console.log(typeof(id))
 	const updatedreply=req.body.replypost;
-	 reply.findByIdAndUpdate(id, { replypost: updatedreply },
+	 Reply.findByIdAndUpdate(id, { replypost: updatedreply },
                             function (err, docs) { 
     if (err){ 
         console.log(err) 
