@@ -26,14 +26,14 @@ exports.showreply=(req,res)=>
 	const commentid= req.params.commentid;
 	console.log(commentid,typeof(commentid))
 	Reply.find({commentid:commentid}, 
-   	(err, replies)=>
+   	(err, data)=>
    	{
    		if(err)
    		{
    			
    		}
    		res.json({
-			replies
+			data
 		})
       
 	});
